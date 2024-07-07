@@ -10,15 +10,11 @@ class FibonacciListScreen extends StatefulWidget {
 class _FibonacciListScreenState extends State<FibonacciListScreen> {
   final fibo_ctl = Get.put(FibonacciController());
 
+
   @override
   void initState() {
-
     super.initState();
   }
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
