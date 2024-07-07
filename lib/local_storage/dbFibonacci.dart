@@ -20,7 +20,7 @@ class FibonacciListDB extends GetxController  {
     dynamic n ;
     if(key!=null){
       if(box.read(key) != null)   n = await  jsonDecode(box.read(key));
-
+      print(n);
     }
 
     return n;

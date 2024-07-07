@@ -20,9 +20,11 @@ class FibonacciController extends GetxController {
   ];
 
   void onchanges(int index) async{
-    if( await connectdb.getFibonacciList("FibonacciList") != null){
-      finaccimodel.value = await connectdb.getFibonacciList("FibonacciList");
-    }
+    // if( await connectdb.getFibonacciList("FibonacciList") != null){
+    //   finaccimodel.value = await connectdb.getFibonacciList("FibonacciList");
+    // }
+    finaccimodel.value.fibonacci![index].ipress = true ;
+    finaccimodel.value.toJson();
   }
 
 
@@ -39,7 +41,7 @@ class FibonacciController extends GetxController {
     }
     map['fibonacci'] = gendata;
     // print(jsonEncode(map));
-    connectdb.setFibonacciList("FibonacciList",jsonEncode(map));
+    // connectdb.setFibonacciList("FibonacciList",jsonEncode(map));
 
     finaccimodel.value = FibonacciNumber.fromJson(map);
   }
